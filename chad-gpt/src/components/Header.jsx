@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-import { brainwave } from "../assets";
+import brainwave  from "../assets/hero/logo2.png";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
@@ -35,9 +35,9 @@ const Header = () => {
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={brainwave} width={190} height={40} alt="Brainwave" />
+      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4 bg-n-1">
+        <a className="block w-[12rem] xl:mr-8" href="https://github.com/alwaysAnsh" target="_blank">
+          <img src={brainwave} width={190} height={40} alt="chad-gpt logo" />
         </a>
 
         <nav
@@ -55,8 +55,8 @@ const Header = () => {
                   item.onlyMobile ? "lg:hidden" : ""
                 } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                   item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
+                    ? "z-2 lg:text-yellow-600"
+                    : "lg:text-black"
                 } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
               >
                 {item.title}
@@ -69,7 +69,7 @@ const Header = () => {
 
         <a
           href="#signup"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
+          className="button hidden mr-8 text-black transition-colors hover:text-n-1 lg:block"
         >
           New account
         </a>
